@@ -26,7 +26,7 @@
 %----------------------------------------------------------------------------------------
 
 % article class because we want to fully customize the page and not use a cv template
-\documentclass[a4paper,12pt]{article}
+\documentclass[letter,12pt]{article}
 
 %----------------------------------------------------------------------------------------
 %	FONT
@@ -54,7 +54,7 @@
 \RequirePackage{color}
 \RequirePackage{graphicx}
 \usepackage[usenames,dvipsnames]{xcolor}
-\usepackage[scale=0.9]{geometry}
+\usepackage[scale=0.9, top=0.5in, bottom=0.3in]{geometry}
 
 %tabularx environment
 \usepackage{tabularx}
@@ -79,7 +79,7 @@
 %CV Sections inspired by: 
 %http://stefano.italians.nl/archives/26
 \titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
-\titlespacing{\section}{0pt}{10pt}{10pt}
+\titlespacing{\section}{0pt}{5pt}{5pt}
 
 %for publications
 \usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
@@ -114,7 +114,8 @@
     \textbf{#1} & \hfill &  #2 \\[3.75pt]
     \end{tabularx}
     \begin{minipage}[t]{\linewidth}
-    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt,label=--]
+    \begin{itemize}[leftmargin=1em, label=--]
+    %[nosep,after=\strut, leftmargin=1em, itemsep=3pt,label=--]
     }
     {
     \end{itemize}
@@ -142,76 +143,114 @@
 % \end{tabularx}
 
 \begin{tabularx}{\linewidth}{@{} C @{}}
-\Huge{Hello Egg} \\[7.5pt]
-\href{https://github.com/username}{\raisebox{-0.05\height}\faGithub\ username} \ $|$ \ 
-\href{https://linkedin.com/in/username}{\raisebox{-0.05\height}\faLinkedin\ username} \ $|$ \ 
-\href{https://mysite.com}{\raisebox{-0.05\height}\faGlobe \ mysite.com} \ $|$ \ 
-\href{mailto:email@mysite.com}{\raisebox{-0.05\height}\faEnvelope \ email@mysite.com} \ $|$ \ 
-\href{tel:+000000000000}{\raisebox{-0.05\height}\faMobile \ +00.00.000.000} \\
+\Huge{Doug Rynar} \\[7.5pt]
+\href{https://github.com/Doug-github-thing}{\raisebox{-0.05\height}\faGithub\ Doug-github-thing} \ $|$ \ 
+\href{https://linkedin.com/in/doug-rynar}{\raisebox{-0.05\height}\faLinkedin\ doug-rynar} \ $|$ \ 
+\href{mailto:dougrynar@gmail.com}{\raisebox{-0.05\height}\faEnvelope \ dougrynar@gmail.com} \ $|$ \ 
+\href{tel:+1 (908) 809-2156}{\raisebox{-0.05\height}\faMobile \ (908) 809-2156} \\
 \end{tabularx}
-
-%----------------------------------------------------------------------------------------
-% EXPERIENCE SECTIONS
-%----------------------------------------------------------------------------------------
 
 %Interests/ Keywords/ Summary
-\section{Summary}
-This CV can also be automatically compiled and published using GitHub Actions. For details, \href{https://github.com/jitinnair1/autoCV}{click here}.
+% \section{Summary}
+% This CV can also be automatically complied and published using GitHub Actions. For details, \href{https://github.com/jitinnair1/autoCV}{click here}.
 
-%Experience
-\section{Work Experience}
-
-\begin{jobshort}{Designation}{Jan 2021 - present}
-long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width
-\end{jobshort}
-
-
-\begin{joblong}{Designation}{Mar 2019 - Jan 2021}
-\item long long line of blah blah that will wrap when the table fills the column width
-\item again, long long line of blah blah that will wrap when the table fills the column width but this time even more long long line of blah blah. again, long long line of blah blah that will wrap when the table fills the column width but this time even more long long line of blah blah
-\end{joblong}
-  
-%Projects
-\section{Projects}
-
-\begin{tabularx}{\linewidth}{ @{}l r@{} }
-\textbf{Some Project} & \hfill \href{https://some-link.com}{Link to Demo} \\[3.75pt]
-\multicolumn{2}{@{}X@{}}{long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width}  \\
-\end{tabularx}
 
 %----------------------------------------------------------------------------------------
 %	EDUCATION
 %----------------------------------------------------------------------------------------
 \section{Education}
-\begin{tabularx}{\linewidth}{@{}l X@{}}	
-2030 - present & PhD (Subject) at \textbf{University} \hfill \normalsize (GPA: 4.0/4.0) \\
 
-2023 - 2027 & Bachelor's Degree at \textbf{College} \hfill (GPA: 4.0/4.0) \\ 
+\begin{jobshort}{MEng. Computer Engineering -- Lehigh University}{2023 -- Dec 2026}
+    Eta Kappa Nu IEEE Honors Society\\
+    \small Coursework: Software Engineering, Computer Architecture, FPGA HLS, Algorithms, Microcontrollers, \\Digital System Design, Operating Systems, Systems Software, Cryptography
+\end{jobshort}
 
-2022 & Class 12th Some Board \hfill  (Grades) \\
-
-2021 & Class 10th Some Board \hfill  (Grades) \\
-\end{tabularx}
-
-%----------------------------------------------------------------------------------------
-%	PUBLICATIONS
-%----------------------------------------------------------------------------------------
-\section{Publications}
-\begin{refsection}[citations.bib]
-\nocite{*}
-\printbibliography[heading=none]
-\end{refsection}
+\begin{jobshort}{BS. Physics -- Lehigh University}{2015 -- 2019}
+\small Coursework: Statistics, Linear Algebra, Electricity \& Magnetism, Computational Physics
+\end{jobshort}
 
 %----------------------------------------------------------------------------------------
 %	SKILLS
 %----------------------------------------------------------------------------------------
 \section{Skills}
-\begin{tabularx}{\linewidth}{@{}l X@{}}
-Some Skills &  \normalsize{This, That, Some of this and that etc.}\\
-Some More Skills  &  \normalsize{Also some more of this, Some more that, And some of this and that etc.}\\  
-\end{tabularx}
 
-\vfill
-\center{\footnotesize Last updated: \today}
+\textbf{Programming Languages:} C/C++, Python , Verilog, Java
 
+\textbf{Frameworks and Libraries:} ReactJS, SQL, Xilinx HLS
+
+\textbf{Software Tools:} Docker, GitHub, and Trello
+
+
+%----------------------------------------------------------------------------------------
+% EXPERIENCE SECTIONS
+%----------------------------------------------------------------------------------------
+
+%Projects
+\section{Projects}
+
+% \begin{tabularx}{\linewidth}{ @{}l r@{} }
+% \textbf{Home Monitoring System} \\
+% % & \hfill \href{https://some-link.com}{Link to Demo} \\[3.75pt]
+% % Used C to program FreeRTOS microcontroller on custom sensor PCB to interface via HTTP RestAPI to Dockerized NodeJS backend with SQL database, React dashboard.
+% \end{tabularx}
+\begin{joblong}{Home Monitoring System}{}
+    % \item Used C to program ESP8266 microcontroller firmware
+    % \item Kicad designed PCB sensor board hardware with I$^2$C interface
+    % \item Docker containerized NodeJS backend with SQL database with React dashboard
+    % % \item Designed with scaling in mind, for many homes with many users
+    \item Developed firmware for ESP8266 microcontroller using C for real-time environmental data collection
+    \item Designed and fabricated a PCB sensor board with an I²C and UART interface using KiCad
+    \item Built a containerized Node.js backend SQL database \& a React dashboard using Docker for deployment
+\end{joblong}
+
+\begin{joblong}{Social Media App}{}
+    % \item Built a full-stack app in a simulated Agile team environment, tracked actions with Trello
+    \item Designed and implemented a full stack social media platform in a simulated Agile team environment
+    \item Built a Java API backend with SQL database, developed both Flutter mobile \& React web frontends
+\end{joblong}
+
+\begin{joblong}{Discord Music Bot Web App}{}
+    \item Integrated a Discord music streaming bot with a React web UI using Java (Spark framework)
+    \item Leveraged Google Firebase and Firestore for real-time synchronization between frontend \& backend
+    \item Designed an interactive music queue and player interface for enhanced user experience
+\end{joblong}
+
+\begin{joblong}{Laboratory Monitoring System Data Validation}{}
+    \item Used Python to automate processing of live data from lab stability chambers and room conditions
+    % \item Automated Python scripts to process and validate real-time data from lab stability chambers \& room sensors
+    % \item Scans through data to identify data gaps or deviations from specification
+    \item Implemented algorithms to detect data gaps, anomalies, and deviations from specifications
+    % \item Creates reports to inform lab management of possible equipment or data integrity issues
+    \item Generated automated reports to notify lab management of potential equipment or data integrity issues
+\end{joblong}
+
+%Work Experience
+\section{Work Experience}
+
+\begin{joblong}{Equipment Specialist III - Pace Life Sciences}{Mar 2022 -- present}
+
+    \item Troubleshooting and repairing analytical lab instrumentation in pharmaceutical GMP environment
+    \item Own the site's schedule for annual Calibration, Preventive Maintenance, and Qualifications
+    \item Communicate with OEMs to diagnose and repair various lab equipment
+    \item Collaborate with network engineers facilitating communication between instrumentation and LIMS
+    \item Ensure compliance of instrumentation/processes with cGMP, ISO 17025, 21 CFR Part 11
+
+\end{joblong}
+
+
+\begin{joblong}{Molecular Technologist - LabCorp}{Jul 2020 -- Feb 2022}
+\item Performed PCR assay with emphasis on instrument maintenance in a collaborative environment
+\end{joblong}
+
+% \vfill
+% \center{\footnotesize Last updated: \today}
+
+% %----------------------------------------------------------------------------------------
+% %	PUBLICATIONS -- RIP no publications
+% %----------------------------------------------------------------------------------------
+% \section{Publications}
+% \begin{refsection}[citations.bib]
+% \nocite{*}
+% \printbibliography[heading=none]
+% \end{refsection}
 \end{document}
